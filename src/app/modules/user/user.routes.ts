@@ -9,6 +9,7 @@ const router = express.Router()
 
 
 router.post('/create-user', UserController.createUserController)
+router.get('/', UserController.getUserController)
 
 
 

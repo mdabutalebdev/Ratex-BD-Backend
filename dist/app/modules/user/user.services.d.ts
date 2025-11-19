@@ -5,5 +5,10 @@ export declare const UserService: {
     } & {
         __v: number;
     }>;
+    grtUserService: () => Promise<(import("mongoose").Document<unknown, {}, InterfaceUser, {}, import("mongoose").DefaultSchemaOptions> & InterfaceUser & {
+        _id: import("mongoose").Types.ObjectId;
+    } & {
+        __v: number;
+    })[]>;
 };
 //# sourceMappingURL=user.services.d.ts.map

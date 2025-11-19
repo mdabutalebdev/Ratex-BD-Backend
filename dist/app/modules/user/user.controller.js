@@ -17,7 +17,25 @@ const createUserController = async (req, res) => {
         });
     }
 };
+const getUserController = async (req, res) => {
+    try {
+        const User = await UserService.grtUserService();
+        res.status(200).json({
+            success: true,
+            message: "User Create Successfull",
+            data: User
+        });
+    }
+    catch (error) {
+        res.status(500).json({
+            success: false,
+            message: "Please check your all field & try again",
+            error
+        });
+    }
+};
 export const UserController = {
     createUserController,
+    getUserController
 };
 //# sourceMappingURL=user.controller.js.map
