@@ -11,7 +11,7 @@ const userSchema = new Schema <InterfaceUser>({
    isDeleted:{type:Boolean, default:false}
 })
 
- 
+  
 export const UserModel = model("User", userSchema)
 
  

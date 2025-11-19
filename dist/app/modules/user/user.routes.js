@@ -1,4 +1,5 @@
 import express from "express";
+import { UserController } from "./user.controller.js";
 const router = express.Router();
 const userData = {
     id: "usr_001",
@@ -9,8 +10,6 @@ const userData = {
     status: "active",
     isDeleted: false
 };
-router.get('/get-user', (req, res) => {
-    res.send(userData);
-});
+router.post('/create-user', UserController.createUserController);
 export const UserRouter = router;
 //# sourceMappingURL=user.routes.js.map
