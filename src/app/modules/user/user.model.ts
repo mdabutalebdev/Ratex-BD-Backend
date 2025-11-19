@@ -1,4 +1,4 @@
-import { Model, Schema } from "mongoose";
+import { model, Schema } from "mongoose";
 import { InterfaceUser } from "./user.interface.js";
 
 const userSchema = new Schema <InterfaceUser>({
@@ -12,6 +12,6 @@ const userSchema = new Schema <InterfaceUser>({
 })
 
  
-export const UserModel = new Model("User", userSchema)
+export const UserModel = model("User", userSchema)
 
  

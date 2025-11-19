@@ -2,8 +2,8 @@ import express from "express";
 const router = express.Router();
 const userData = {
     id: "usr_001",
-    email: "john.doe@example.com",
-    password: "hashed_password_123",
+    email: "mdabutaleb.dev@gmail.com",
+    password: "abu_password_123",
     isPasswordChange: false,
     role: "student",
     status: "active",

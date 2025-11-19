@@ -1,4 +1,4 @@
-import { Model, Schema } from "mongoose";
+import { model, Schema } from "mongoose";
 const userSchema = new Schema({
     id: { type: String, required: true, unique: true },
     email: { type: String, required: true, unique: true },
@@ -8,5 +8,5 @@ const userSchema = new Schema({
     status: { type: String, enum: ["active", "blocked", "admin"] },
     isDeleted: { type: Boolean, default: false }
 });
-export const UserModel = new Model("User", userSchema);
+export const UserModel = model("User", userSchema);
 //# sourceMappingURL=user.model.js.map

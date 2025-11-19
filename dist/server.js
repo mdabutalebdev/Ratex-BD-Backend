@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
 import app from "./index.js";
 main().catch(err => console.log(err));
-const port = 5000;
 async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/test');
-    app.listen(port, () => {
-        console.log(`Example app listening on port ${port}`);
+    await mongoose.connect(process.env.DATABASE_URL);
+    console.log("MongoDB Connected Successfully!");
+    app.listen(process.env.PORT, () => {
+        console.log(`Example app listening on port ${process.env.PORT}`);
     });
 }
 //# sourceMappingURL=server.js.map
